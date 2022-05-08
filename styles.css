@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 125, 125);
+}
+
+.rose#message, .rose#center, .rose#container {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: cursive;
+    text-align: center;
+}
+
+.rose#message {
+    opacity:0;
+    z-index:1;
+    font-size: 2vmin;
+    width:40vmin;
+}
+
+.rose#center {
+    z-index:2;
+    font-size: 4vmin;
+}
+
+.rose#container {
+    z-index:3;
+    width:50vmin;
+    height:50vmin;
+    border-radius: 50%;
+}
+
+.rose#container:hover > .rose#center {
+    opacity:0;
+}
+
+.rose#container:hover > .rose#message {
+    opacity:1;
+}
+
+.rose#petals {
+    position: absolute;
+    z-index: 0;
+}
+
+canvas#canvas {
+    width:100vw;
+    height:100vh;
+}
+
+button {
+    background: none;
+    border: none;
+    background-image: url("button1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:84.5vmin;
+    height:32.9vmin;
+    z-index: 4;
+}
+
+button:active {
+    background-image: url("button2.png");
+}
